@@ -74,15 +74,20 @@ h3{
 }
 h4{
   color: white;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 11px;
+  height: 60px;
 }
 .btn-group{
   width: 100%;
-  margin-bottom: 15px;
+  height: 60px;
+  margin: 0 0 10px;
 }
 .btn-danger{
   color: #fff;
   background-color: #d9534f;
   border-color: #d9534f;
+}
+p{
+  color:white;
+  height: 60px;
 }

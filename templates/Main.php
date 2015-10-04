@@ -105,16 +105,25 @@
                 <div class="container">
                   <div class="content slide2">
                     <div class="row processed">
-                      <div class="col-lg-4 column">
+                      <div class="col-lg-2 column">
                           <h3>Execute Time</h3>
                           <div id="exetime">
 
                           </div>
                       </div>
-                      <div class="col-lg-8 column">
+                      <div class="col-lg-10 column">
                         <h3>Round Robin Scheduling</h3>
-                        <div id="schedule">
+                        <div class="row">
+                          <div class="col-lg-7">
+                            <div id="schedule">
 
+                            </div>
+                          </div>
+                          <div class="col-lg-5">
+                            <div id="description">
+
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
