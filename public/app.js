@@ -1,3 +1,4 @@
+var qq;
 function validate(evt) {
     var theEvent = evt || window.event;
     var key = theEvent.keyCode || theEvent.which;
@@ -21,7 +22,7 @@ function printInputProcess(num){
 }
 
 function rrobin(name,arr,exe,num,q,allExeTime) {
-
+  qq=q;
 
   for(var i=1;i<arr.length;i++){
 			for(var j=i-1;j>=0;j--){
@@ -74,10 +75,10 @@ function rrobin(name,arr,exe,num,q,allExeTime) {
 			}else if(exe[proces[0]] <= q && parseInt(currentQTime)+parseInt(exe[proces[0]]) == i){
 				currentQTime += exe[proces[0]];
 				exe[proces[0]] -= exe[proces[0]];
-				proces.shift();
+				var tmp = proces.shift();
 				t.push(i+"--check exe <=");
 				console.log(proces+i);
-        outComplt(proces,i,name);
+        outComplt(proces,i,name,tmp);
 			}
 
       //console.log(i+","+name[proces[0]]+","+arr[proces[0]]+","+exe[proces[0]]+","+currentQTime+","+q);
@@ -97,6 +98,10 @@ function outArrival(proces,i,name){
   e += "</div>";
   $('#exetime').append(t);
   $('#schedule').append(e);
+  var p="";
+  if(i==0) p = "<p>"+name[proces[0]]+" arrives and gets processed.</p>";
+  else p = "<p>"+name[proces.length-1]+" arrives.</p>";
+  $('#description').append(p);
 }
 
 function outOutG(proces,i,name){
@@ -108,9 +113,16 @@ function outOutG(proces,i,name){
   e += "</div>";
   $('#exetime').append(t);
   $('#schedule').append(e);
+
+  var p = "<p>Quantum time "+qq+"ms expires, so "+name[proces[proces.length-1]]+" is forced out of CPU";
+  if(proces.length >=2){
+    p += " and "+name[proces[0]]+" gets processed."
+  }
+  p += "</p>"
+  $('#description').append(p);
 }
 
-function outComplt(proces,i,name){
+function outComplt(proces,i,name,tmp){
   var t = "<h4>"+i+"</h4>";
   var e = "<div class='btn-group' role='group' aria-label='Basic example'>";
   for(var j=0;j<proces.length;j++){
@@ -119,6 +131,13 @@ function outComplt(proces,i,name){
   e += "</div>";
   $('#exetime').append(t);
   $('#schedule').append(e);
+
+  var p = "<p>"+name[tmp]+" gets completed";
+  if(proces.length >0){
+    p += " so "+name[proces[0]]+" gets processed."
+  }
+  p += "</p>"
+  $('#description').append(p);
 }
 
 
