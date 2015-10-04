@@ -1,3 +1,29 @@
-h1{
-  color: red;
+.background-slide{
+  background-image: url('images/bg.png');
+  background-repeat: repeat;
+}
+
+.content{
+  margin-top: 10%
+}
+
+.input-lg{
+  height: 160px;
+  font-size: 50px
+}
+
+.button-layout{
+  text-align: right;
+  margin: 2em;
+}
+
+.btn-primary{
+  background-color: #0275d8;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 16px 30px;
+    font-size: 28px;
+    line-height: 1.3333333;
+    border-radius: 2px;
 }
