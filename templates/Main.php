@@ -35,12 +35,12 @@
 
   <!-- Full Page Image Background Carousel Header -->
   <header id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
+      <!-- Indicators
       <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
+      </ol>-->
 
       <!-- Wrapper for Slides -->
       <div class="carousel-inner">
@@ -64,16 +64,68 @@
           </div>
           <div class="item">
               <!-- Set the second background image using inline CSS below. -->
-              <div class="fill background-slide" style=""></div>
+              <div class="fill background-slide" style="">
+                <div class="container">
+                  <div class="content slide2">
+                    <form id="processform">
+                      <div class="inq">
+                        <label>Quantum Time: </label>
+                        <input id="q" class="form-control" type="text" placeholder="Input Quantum Time" onKeyPress="validate(event)"  />
+                      </div>
+                      <div class="row rowph">
+                        <div class="col-lg-4">
+                          <h3>Process Name</h3>
+                        </div>
+                        <div class="col-lg-4">
+                          <h3>Arrival Time</h3>
+                        </div>
+                        <div class="col-lg-4">
+                          <h3>Execute Time</h3>
+                        </div>
+                      </div>
+                      <div id="process" class="process">
+
+                      </div>
+
+                      <div class="button-layout">
+                        <button id="back" type="button" class="btn btn-danger btn-lg">Back</button>
+                        <button id="number" type="submit" class="btn btn-primary btn-lg">Next</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
               <div class="carousel-caption">
-                  <h2>Caption 2</h2>
+                  <h2>Input <font id="showNum"></font> process</h2>
               </div>
           </div>
           <div class="item">
               <!-- Set the third background image using inline CSS below. -->
-              <div class="fill background-slide" style="background-image:url('public/images/bg.png');"></div>
+              <div class="fill background-slide">
+                <div class="container">
+                  <div class="content slide2">
+                    <div class="row processed">
+                      <div class="col-lg-4 column">
+                          <h3>Execute Time</h3>
+                          <div id="exetime">
+
+                          </div>
+                      </div>
+                      <div class="col-lg-8 column">
+                        <h3>Round Robin Scheduling</h3>
+                        <div id="schedule">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button-layout">
+                    <button id="back2" type="button" class="btn btn-danger btn-lg">Back</button>
+                  </div>
+                </div>
+              </div>
               <div class="carousel-caption">
-                  <h2>Caption 3</h2>
+                  <h2>Complete. [Crafted by : Sayamrat กับ Arthit]</h2>
               </div>
           </div>
       </div>
